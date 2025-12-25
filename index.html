@@ -1,78 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Soufiane Shop</title>
+  <title>Soufiane Shop | Site Officiel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ===== CSS KAMEL ===== -->
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      background: #f4f4f4;
     }
 
-    header {
-      background: #111;
-      color: white;
-      padding: 25px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .product {
-      background: white;
-      width: 280px;
+    /* NAVBAR */
+    nav {
+      background: #000;
       padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: sticky;
+      top: 0;
     }
 
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-
-    .price {
-      color: green;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #25D366;
+    nav a {
       color: white;
+      margin: 0 15px;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
     }
 
-    footer {
-      background: #111;
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg,#000,#444);
       color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background: white;
+      margin: 20px;
+      border-radius: 15px;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* FORM */
+    .contact form {
+      max-width: 450px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
       padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 25px;
       margin-top: 30px;
     }
   </style>
@@ -80,64 +110,48 @@
 
 <body>
 
-  <header>
-    <h1>Soufiane Shop</h1>
-    <p>مرحبا بكم | الطلب عبر WhatsApp</p>
-  </header>
+<!-- ===== NAV ===== -->
+<nav>
+  <a href="#home">Accueil</a>
+  <a href="#about">À propos</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <div class="container">
-    <h2>المنتجات</h2>
+<!-- ===== HOME ===== -->
+<section id="home" class="hero">
+  <h1>Soufiane Shop</h1>
+  <p>Site web professionnel – Multi services</p>
+</section>
 
-    <div class="products">
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>من نحن</h2>
+  <p>
+    Soufiane Shop مشروع مهني كنقدمو فيه خدمات ومنتجات
+    بجودة عالية واهتمام خاص بالزبون.
+    الهدف ديالنا هو الثقة والاحترافية.
+  </p>
+</section>
 
-      <div class="product">
-        <h3>Produit 1</h3>
-        <p class="price">199 DH</p>
-        <a class="whatsapp-btn"
-           href="https://wa.me/212674412120"
-           target="_blank">
-           Commander WhatsApp
-        </a>
-      </div>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <h2>عمر المعلومات ديالك</h2>
 
-      <div class="product">
-        <h3>Produit 2</h3>
-        <p class="price">249 DH</p>
-        <a class="whatsapp-btn"
-           href="https://wa.me/212674412120"
-           target="_blank">
-           Commander WhatsApp
-        </a>
-      </div>
+  <form>
+    <input type="text" placeholder="الاسم الكامل" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="رقم الهاتف" required>
+    <input type="text" placeholder="المدينة" required>
+    <textarea placeholder="رسالتك أو الطلب ديالك" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
 
-      <div class="product">
-        <h3>Produit 3</h3>
-        <p class="price">299 DH</p>
-        <a class="whatsapp-btn"
-           href="https://wa.me/212674412120"
-           target="_blank">
-           Commander WhatsApp
-        </a>
-      </div>
-
-      <!-- 🟢 Table décorative -->
-      <div class="product">
-        <img src="images/table1.jpg" alt="Table décorative">
-        <h3>Table décorative</h3>
-        <p class="price">499 DH</p>
-        <a class="whatsapp-btn"
-           href="https://wa.me/212674412120"
-           target="_blank">
-           Commander WhatsApp
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2025 Soufiane Shop | Tel: 0674412120</p>
-  </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2025 Soufiane Shop</p>
+  <p>جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
