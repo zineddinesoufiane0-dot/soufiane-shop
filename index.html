@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -51,14 +52,23 @@
       border-radius: 15px;
     }
 
-    section h2 {
-      margin-bottom: 15px;
+    /* ===== PRODUCTS ===== */
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      max-width: 800px;
+      margin: auto;
+      text-align: right;
     }
 
-    section p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 17px;
+    .product img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .product .info h3 {
+      margin: 0 0 10px;
     }
 
     /* FORM */
@@ -76,11 +86,6 @@
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 15px;
-    }
-
-    textarea {
-      height: 120px;
-      resize: none;
     }
 
     button {
@@ -105,13 +110,22 @@
       padding: 25px;
       margin-top: 30px;
     }
+
+    /* 📱 TELEPHONE */
+    @media (max-width: 600px) {
+      .product {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product img {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
-<body> 
-  
-
-  
+<body>
 
 <!-- ===== NAV ===== -->
 <nav>
@@ -134,20 +148,22 @@
     بجودة عالية واهتمام خاص بالزبون.
     الهدف ديالنا هو الثقة والاحترافية.
   </p>
-</section><!-- ===== PRODUITS ===== -->
+</section>
+
+<!-- ===== PRODUITS ===== -->
 <section id="products">
   <h2>المنتجات ديالنا</h2>
 
   <div class="product">
-    <img src="images/table.jpeg" style="width:20%;border-radius:5px;">
-    <h3>Table décorative</h3>
-    <p>طابلة خشبية بتصميم عصري</p>
-    <p><strong>السعر:</strong> 499 DH</p>
+    <img src="images/table.jpeg" alt="Table décorative">
+
+    <div class="info">
+      <h3>Table décorative</h3>
+      <p>طابلة خشبية بتصميم عصري</p>
+      <p><strong>السعر:</strong> 499 DH</p>
+    </div>
   </div>
-
 </section>
-
-  
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="contact">
@@ -155,10 +171,8 @@
 
   <form>
     <input type="text" placeholder="الاسم الكامل" required>
-  
     <input type="tel" placeholder="رقم الهاتف" required>
     <input type="text" placeholder="المدينة" required>
-    
     <button type="submit">إرسال</button>
   </form>
 </section>
@@ -171,6 +185,3 @@
 
 </body>
 </html>
-
-
-
